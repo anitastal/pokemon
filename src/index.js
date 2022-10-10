@@ -1,0 +1,11 @@
+import './js/rendering-catalogue';
+import './js/gallery-creator';
+import './js/header-menuBtn';
+import './js/header-nav-Btn';
+import './js/custome-select';
+import './js/day-night-theme';
+import './js/change-page';
+import './js/add-to-favorite';
+import './js/light-scroll';
+import './js/if-not-cocktails';
+import './js/if-not-ingridients';

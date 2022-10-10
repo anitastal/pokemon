@@ -1,0 +1,27 @@
+<h2 class='modal-first__title'>{{strDrink}}</h2>
+<div class='modal-first__instractions'>
+  <h3 class='modal-first__title-second'>Instractions:</h3>
+
+  <p class='modal-first__text'>{{strInstructions}}</p>
+
+</div>
+<img class='modal-first__img' src='{{strDrinkThumb}}' alt='{{strDrink}}' />
+<div class='modal-first__ingridients'>
+  <h3 class='modal-first__title-second ingridients'>INGREDIENTS</h3>
+  <span class='modal-first__span'>Per cocktail</span>
+  <ul class='modal-first__list list'>
+    {{#each strDoseIng}}<li class='modal-first__item'>{{this}}</li>
+    {{/each}}
+  </ul>
+</div>
+<button type='button' class='modal-first__button'>Add to favorite</button>
+{{! <svg class='modal-first__icon-close exp' data-modal-close>
+  <use
+    href='http://localhost:1234/all_svg.svg#icon-clarity_close-line-black'
+  ></use>
+</svg> }}
+<svg class='modal-first__icon-close exp' data-modal-close>
+  <use
+    href='https://vokoloven.github.io/hardcore-bar/all_svg.svg#icon-clarity_close-line-black'
+  ></use>
+</svg>

@@ -1,0 +1,113 @@
+<header id="header" class="header">
+  <div class="container" style="position: relative; height: 90px">
+    <div class="header-container container">
+      <a href="./index.html" class="header__logo-link">
+        <img
+          src="./images/header/Logo.svg"
+          alt="Logo-coktails"
+          class="header__logo"
+        />
+      </a>
+      <div class="header__input-box--menu inputMenu--is-hidden">
+        <form class="header__search-form">
+          <button class="header__input-button" type="submit">
+            <img
+              src="./images/header/bx_search.svg"
+              alt="search-btn-img"
+              class="header__input-icon"
+            />
+          </button>
+          <input
+            class="header__input"
+            name="headerInput"
+            type="text"
+            placeholder="Search"
+            autocomplete="off"
+          />
+        </form>
+      </div>
+      <button class="header__button-menu">
+        <svg class="header__icon-menu" width="30px" height="16px">
+          <use href="./images/header/header-sprite.svg#icon-menu-black"></use>
+        </svg>
+        <svg
+          class="header__icon-menu header__icon-menu--close header__icon-menu--is-hidden"
+          width="30px"
+          height="30px"
+        >
+          <use
+            href="./images/header/header-sprite.svg#icon-clarity_close-line"
+          ></use>
+        </svg>
+      </button>
+    </div>
+    <div class="header__menu header__menu--is-hidden">
+      <a href="./index.html" class="header__logo-link">
+        <img
+          src="./images/header/Logo.svg"
+          alt="Logo-coktails"
+          class="header__logo header__logo--menu"
+        />
+      </a>
+      <nav class="header__nav header__nav--menu">
+        <ul class="header__nav-list header__nav-list--menu">
+          <li class="header__nav-item header__nav-item--menu">
+            <a
+              onclick="location.reload(); return false;"
+              href="./index.html"
+              class="header__nav-text"
+              >Home</a
+            >
+          </li>
+          <li class="header__nav-item">
+            <button
+              type="button"
+              class="header__nav-text header__nav-text--btn"
+            >
+              Favorite
+            </button>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="header__color-theme-box header__color-theme-box--menu">
+        <span
+          class="header__color-theme-box-text header__color-theme-box-text--light"
+          >Light</span
+        >
+        <div class="header__color-theme-box__switch">
+          <div class="header__color-theme-box__switch-ball"></div>
+        </div>
+        <span
+          class="header__color-theme-box-text header__color-theme-box-text--dark"
+          >Dark</span
+        >
+      </div>
+    </div>
+    <div class="header__favorite-box header__favorite-box--is-hidden">
+      <ul class="header__favorite-box__list">
+        <li class="header__favorite-box__item">
+          <a onclick="return false" class="header__favorite-box__text" href="">
+            Favorite cocktails</a
+          >
+        </li>
+        <li class="header__favorite-box__item">
+          <a
+            onclick="return false"
+            class="header__favorite-box__text header__favorite-box__text-2"
+            href=""
+            >Favorite ingridients</a
+          >
+        </li>
+      </ul>
+    </div>
+    <a
+      style="text-decoration: none; flex-direction: column"
+      href="#toTop"
+      class="button-toTop"
+    >
+      ABC
+      <span style="font-size: 10px"> Search</span>
+    </a>
+  </div>
+</header>

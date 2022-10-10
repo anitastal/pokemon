@@ -1,0 +1,192 @@
+.backdrop-campari {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: opacity 1000ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 1000ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop-campari.is-hidden-campari {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.backdrop-campari.is-hidden-campari .modal-campari {
+  transform: translate(-50%, -50%) scale(0.2);
+}
+
+.overflow-campari {
+  overflow: hidden;
+}
+
+.modal-campari {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 1000ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  background-color: $colorBackgroundDay;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 320px;
+  max-width: 480px;
+  padding: 40px 20px;
+
+  @include tablet {
+    min-width: 715px;
+    padding: 0;
+  }
+}
+
+.top-container {
+  @include tablet {
+    padding-top: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+.bot-container {
+  @include tablet {
+    padding-bottom: 28px;
+    padding-left: 28px;
+    padding-right: 28px;
+  }
+}
+
+.campari-line {
+  @include tablet {
+    border-bottom: 1px solid $colorFontPrimary;
+    margin-bottom: 28px;
+  }
+}
+
+.campari-titles__border {
+  margin-bottom: 20px;
+
+  @include tablet {
+    border-bottom: 1px solid $colorFontPrimary;
+    padding-left: 28px;
+    padding-right: 28px;
+    padding-bottom: 40px;
+  }
+}
+
+.campari-title {
+  @include fonts($ff: Roboto, $ffs: normal, $fw: 900, $fs: 32px, $lh: 38px);
+  color: $colorFontSecondary;
+  margin-bottom: 20px;
+
+  @include tablet {
+    margin-bottom: 28px;
+  }
+
+  &__min {
+    @include fonts($ff: Poppins, $ffs: normal, $fw: 600, $fs: 16px, $lh: 24px);
+    text-transform: uppercase;
+
+    @include tablet {
+      margin-bottom: 40px;
+    }
+  }
+}
+
+.campari-text__container {
+  margin-bottom: 32px;
+
+  overflow: auto;
+
+  @include tablet {
+    height: 300px;
+    overflow: auto;
+    padding-top: 28px;
+    padding-left: 28px;
+    padding-right: 33px;
+  }
+}
+
+.campari-text {
+  color: $colorFontTertiary;
+
+  @include fonts($ff: Poppins, $ffs: normal, $fw: 400, $fs: 16px, $lh: 28px);
+}
+
+.campari-list {
+  margin-top: 28px;
+  margin-bottom: 32px;
+
+  @include tablet {
+    margin-bottom: 40px;
+  }
+}
+
+.campari-list__item {
+  @include fonts($ff: Poppins, $ffs: normal, $fw: 400, $fs: 16px, $lh: 26px);
+  color: #5f6775;
+}
+
+.campari-list__itemb {
+  color: $colorFontSecondary;
+}
+
+.campari-btn__close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+
+  width: 32px;
+  height: 32px;
+  padding: 0;
+
+  cursor: pointer;
+
+  border-radius: 50%;
+  border: none;
+  background-color: transparent;
+
+  transition: 0.5s;
+
+  @include tablet {
+    top: 12px;
+    right: 12px;
+  }
+}
+
+.campari-icon__close {
+  display: block;
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.campari-btn__add {
+  width: auto;
+  display: flex;
+  justify-content: center;
+
+  margin-right: auto;
+
+  @include tablet {
+    margin-right: 0;
+    margin-left: auto;
+  }
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  @include fonts($ff: Roboto, $ffs: normal, $fw: 400, $fs: 20px, $lh: 24px);
+  letter-spacing: 0.02em;
+  padding: 12px 24px;
+  background-color: $colorFontPrimary;
+}

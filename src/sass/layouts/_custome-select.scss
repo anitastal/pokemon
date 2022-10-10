@@ -1,0 +1,123 @@
+.select {
+  // мобильная версия
+  @include mobile {
+    position: relative;
+    margin: 0 auto;
+  }
+
+  @include tablet {
+    position: absolute;
+    top: 45%;
+
+    display: flex;
+    justify-content: center;
+  }
+  @include desktop {
+    top: 45%;
+  }
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 93px;
+    height: 34px;
+    border: 1px solid $colorFontPrimary;
+    border-radius: 4px;
+    margin: auto;
+
+    @include tablet {
+      display: none;
+    }
+  }
+  // кнопка ховер
+  &__btn:hover {
+    background-color: $colorFontPrimary;
+  }
+  // кнопка ховер буква
+  &__btn:hover &__current {
+    color: $colorBackgroundDay;
+  }
+  // кнопка ховер стрелка
+  &__btn:hover &__icon {
+    fill: $colorBackgroundDay;
+  }
+  // текущая буква в кнопке
+  &__current {
+    @include fonts($fw: 700, $fs: 16px, $lh: 15px);
+    color: $colorFontPrimary;
+  }
+  // алфавит
+  &__body {
+    left: 0;
+    right: 0;
+    top: 100%;
+    border: 1px solid $colorFontPrimary;
+    border-radius: 4px;
+    border-top: 0;
+
+    text-align: left;
+    width: 93px;
+    height: 84px;
+
+    margin: auto;
+
+    @include mobile {
+      overflow: scroll;
+    }
+
+    @include tablet {
+      position: absolute;
+      top: 50%;
+      right: 50%;
+      display: grid;
+      grid-template-columns: repeat(13, 1fr);
+      justify-items: center;
+      border: 1px solid transparent;
+      width: 324px;
+      height: 75px;
+      overflow: hidden;
+    }
+    @include desktop {
+      width: 519px;
+      height: 120px;
+      right: 60%;
+    }
+
+    // клас который скрывает алфавит для мобилки
+    &.is-hidden-hero {
+      @include mobile {
+        opacity: 0;
+        pointer-events: none;
+      }
+      // для планшета открывает алфавит
+      @include tablet {
+        pointer-events: visible;
+        opacity: 1;
+      }
+    }
+  }
+
+  &__item {
+    color: $colorFontTertiary;
+
+    @include mobile {
+      cursor: pointer;
+      @include fonts($fw: 700, $ffs: bold, $fs: 10px, $lh: 15px);
+      padding: 6px 10px;
+    }
+    @include tablet {
+      @include fonts($fw: 700, $ffs: bold, $fs: 14px, $lh: 21px);
+      padding: 0px 7px;
+      &:hover {
+        color: $colorFontPrimary;
+      }
+    }
+    @include desktop {
+      @include fonts($fw: 700, $fs: 24px, $lh: 36px);
+      padding: 3px 11px;
+    }
+  }
+  &__icon {
+    fill: $colorFontPrimary;
+  }
+}

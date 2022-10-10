@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hardcore Bar</title>
+    <script type="module" src="./index.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="icon" href="./images/header/favicon.svg" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&family=Roboto:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./sass/index.scss" />
+  </head>
+
+  <body>
+    <!-- ❗️❗️❗️ Add partials like so for every page -->
+    <include src="./partials/header.html"></include>
+    <main>
+      <!-- Main page -->
+      <div class="main-page">
+        <include src="./partials/hero.html"></include>
+        <include src="./partials/catalogue.html"></include>
+      </div>
+
+      <!-- Second page -->
+      <div class="favorite-cocktails-page hidden-page">
+        <include src="./partials/favorite-cocktails.html"></include>
+      </div>
+
+      <!-- Third page -->
+      <div class="favorite-ingridients-page hidden-page">
+        <include src="./partials/favorite-ingridients.html"></include>
+      </div>
+    </main>
+    <include src="./partials/footer.html"></include>
+  </body>
+</html>

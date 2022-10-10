@@ -1,0 +1,89 @@
+.hero {
+  @include mobile {
+    background-color: inherit;
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
+
+  @include tablet {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 70px;
+    padding-bottom: 60px;
+    position: relative;
+  }
+  @include desktop {
+    padding-top: 30px;
+    padding-bottom: 60px;
+  }
+}
+.hero__item {
+  list-style-type: none;
+}
+
+.hero__list {
+  @include mobile {
+    color: $colorFontPrimary;
+    @include fonts($fs: 22px, $lh: 42px);
+  }
+
+  @include tablet {
+    @include fonts($fs: 26px, $lh: 42px);
+    width: 334px;
+  }
+
+  @include desktop {
+    @include fonts($fs: 52px, $lh: 80px);
+    width: 668px;
+  }
+}
+
+.hero__search {
+  @include mobile {
+    @include fonts($fw: 500, $fs: 14px, $lh: 28px);
+    letter-spacing: 0.02em;
+    color: #000000;
+    opacity: 0;
+    bottom: 0;
+    list-style-type: none;
+  }
+  @include tablet {
+    margin-top: 40px;
+    opacity: 0.8;
+  }
+  @include desktop {
+    @include fonts($fs: 18px, $lh: 28px);
+    margin-top: 40px;
+    opacity: 0.8;
+  }
+}
+.img__cocktail {
+  @include mobile {
+    max-width: 480px;
+    width: 100%;
+  }
+  @include tablet {
+    max-width: 1280px;
+  }
+}
+.hero__search-mobile {
+  @include mobile {
+    @include fonts($fw: 500, $fs: 14px, $lh: 28px);
+    letter-spacing: 0.02em;
+    color: #000000;
+    opacity: 0.8;
+    bottom: 0;
+    margin-top: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  @include tablet {
+    display: none;
+    opacity: 0;
+  }
+  @include desktop {
+    @include fonts($fs: 18px, $lh: 28px);
+    display: none;
+    opacity: 0;
+  }
+}

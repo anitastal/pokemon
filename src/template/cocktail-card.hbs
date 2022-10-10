@@ -1,0 +1,38 @@
+<li id='{{idDrink}}' class='catalogue__item'>
+  <img
+    src='{{strDrinkThumb}}'
+    alt='{{strDrink}}'
+    min-width='280'
+    loading='lazy'
+  />
+  <div class='catalogue__description'>
+    <p class='catalogue__text'>{{strDrink}}</p>
+    <div class='catalogue__btn'>
+      <button class='btn__orange open-modal-button' type='button'>Learn more</button>
+      <button class='btn__transparent' type='button'>
+        Add to
+
+        {{! <img
+          class='svg__btn'
+          src='http://localhost:1234/heart-tomato.svg'
+          alt='not-found-cocktails-img'
+        /> }}
+
+        <img
+          class='svg__btn'
+          src='https://vokoloven.github.io/hardcore-bar/heart-tomato.svg'
+          alt='not-found-cocktails-img'
+        />
+
+        {{! <svg class='svg__btn' width='21px' height='19px' data-modal-close>
+          <use href='http://localhost:1234/all_svg.svg#icon-heart-tomato'></use>
+        </svg>
+        <svg class='svg__btn' width='21px' height='19px' data-modal-close>
+          <use
+            href='https://vokoloven.github.io/hardcore-bar/all_svg.svg#icon-heart-tomato'
+          ></use>
+        </svg> }}
+      </button>
+    </div>
+  </div>
+</li>
