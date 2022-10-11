@@ -4,8 +4,7 @@
   ],
   "reporters": [
     "...",
-    "parcel-reporter-clean-dist",
-    "parcel-reporter-static-files-copy"
+    "parcel-reporter-clean-dist"
   ],
   "transformers": {
     "*.hbs": [
